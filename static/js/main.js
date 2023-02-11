@@ -1,6 +1,6 @@
 $(document).ready(function () {
   listing();
-  bsCustomFileInput.init(); //file ini terhubung dengan library
+  bsCustomFileInput.init(); //memanggil fungsinya dari libary
 });
 
 function listing() {

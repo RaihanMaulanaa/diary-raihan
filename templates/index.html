@@ -3,6 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Berikan catatan anda" />
+    <meta
+      property="og:description"
+      content="anda dapat melihat catatan orang-orang pada halaman ini."
+    />
+    <meta
+      property="og:image"
+      content="{{ url_for('static/image', filename='meta-image.jpg') }}"
+    />
     <title>LearningX | Practice By Raihan Maulana</title>
 
     <!-- link Bootstrap CSS  -->
@@ -33,7 +42,7 @@
       rel="stylesheet"
     />
 
-    <!-- link library khusus untuk melihat file gambar kita -->
+    <!-- link ini berisi membuat custom input file dengan menggunakan bootstrap. -->
     <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
 
     <!-- link css manual -->
@@ -77,11 +86,7 @@
             ></textarea>
           </div>
           <div class="input-group mb-3">
-            <input
-              type="date"
-              class="form-control"
-              id="tanggal-time"
-            />
+            <input type="date" class="form-control" id="tanggal-time" />
           </div>
         </div>
         <!-- upload kartu -->
