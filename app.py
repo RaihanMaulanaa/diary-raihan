@@ -26,7 +26,7 @@ def save_diary():
     # variabel ini berfungsi untuk menerima permintaan/request dari client
     title_receive = request.form.get('title_give')
     content_receive = request.form.get('content_give')
-    time_receive = request.form.get('time_give')
+    # time_receive = request.form.get('time_give')
 
     # membuat objek datetime
     today = datetime.now()
@@ -48,6 +48,8 @@ def save_diary():
     extension = profile.filename.split('.')[-1]
     profilename = f'static/image/profil-{mytime}.{extension}'
     profile.save(profilename)
+  
+    time = today.strftime('%d.%m.%Y')
 
     # lalu menyimpan datanya pada doc setelahnya ditambahkan ke database bernama diary
     doc = {
@@ -55,7 +57,7 @@ def save_diary():
         'profile': profilename,
         'title': title_receive,
         'content': content_receive,
-        'time': time_receive
+        'time': time
     }
     db.diary.insert_one(doc)
     return jsonify({'pesan': 'Kartu telah ditambahkan'})

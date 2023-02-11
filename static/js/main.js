@@ -15,7 +15,7 @@ function listing() {
         let profile = articles[i]["profile"];
         let title = articles[i]["title"];
         let content = articles[i]["content"];
-        let time = articles[i]["time"];
+        let time = articles[i]["time"] || "??.??.????";
         let temp_html = `
           <div class="col-4">
             <div class="card">
@@ -69,10 +69,10 @@ function posting() {
     return alert("Hei pengguna, anda belum masukkan foto profil pada kartu");
   }
 
-  let time = $("#tanggal-time").val()
-  if (!time) {
-    return alert("Hei pengguna, anda belum memberi tanggal pada kartu");
-  }
+  // let time = $("#tanggal-time").val()
+  // if (!time) {
+  //   return alert("Hei pengguna, anda belum memberi tanggal pada kartu");
+  // }
 
   // membuat objek formData
   form_data = new FormData();
@@ -82,7 +82,7 @@ function posting() {
   form_data.append("profile_give", profile);
   form_data.append("title_give", title);
   form_data.append("content_give", content);
-  form_data.append("time_give", time);
+  // form_data.append("time_give", time);
 
   $.ajax({
     type: "POST",
