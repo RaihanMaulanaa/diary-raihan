@@ -2,7 +2,6 @@
   "install": "pip3 install --user -r requirements.txt",
   "start": "PYTHONUNBUFFERED=true python3 app.py",
   "watch": {
-<<<<<<< HEAD
     "ignore": ["\\.pyc$"],
     "install": {
       "include": ["^requirements\\.txt$"]
@@ -13,22 +12,3 @@
     "throttle": 1000
   }
 }
-=======
-    "ignore": [
-      "\\.pyc$"
-    ],
-    "install": {
-      "include": [
-        "^requirements\\.txt$"
-      ]
-    },
-    "restart": {
-      "include": [
-        "\\.py$",
-        "^start\\.sh"
-      ]
-    },
-    "throttle": 1000
-  }
-}
->>>>>>> f375775e43ffda3422f9a7a772c74c501ec773d7
